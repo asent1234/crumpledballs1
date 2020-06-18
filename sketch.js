@@ -27,7 +27,7 @@ function draw() {
   if(gameState === "start"){
   text("This is small game that will teach you the importance of throwing away your trash. Press Up Arrow to Start.", 100,350)
   if(keyCode === UP_ARROW){
-  gameStaet = "play"
+  gameState = "play"
   }
   }
   if(gameState === "play"){
