@@ -8,7 +8,7 @@ const Body = Matter.Body;
 function setup() {
 	createCanvas(800, 700);
 	rectMode(CENTER);
-
+        gameState = "start"
 	engine = Engine.create();
 	world = engine.world
 
@@ -24,13 +24,20 @@ function setup() {
 
 
 function draw() {
+  if(gameState === "start"){
+  text("This is small game that will teach you the importance of throwing away your trash. Press Space to Start.", 100,350)
+  if(keyCode === SPACE){
+  gameStaet = "play"
+  }
+  }
+  if(gameState === "play"){
   rectMode(CENTER);
   background(0);
   createEdgeSprites();
   dustbin.display();
   paper.display();
   drawSprites();
-
+  }
 }
 
 
