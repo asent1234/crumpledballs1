@@ -25,7 +25,7 @@ function setup() {
 
 function draw() {
   if(gameState === "start"){
-  text("This is small game that will teach you the importance of throwing away your trash. Press Up Arrow to Start.", 100,350)
+  text("This is small game that will teach you the importance of throwing away your trash. Press Up Arrow to Start, and Up to throw away the trash.", 50,350)
   if(keyCode === UP_ARROW){
   gameState = "play"
   }
@@ -42,9 +42,10 @@ function draw() {
 
 
 function keyPressed() {
- if (keyCode === UP_ARROW) {
-    Matter.Body.applyForce(paper.body, paper.body.position, {x:132, y:-105});
+ if (keyCode === UP_ARROW && gameState === "play") {
+    Matter.Body.applyForce(paper.body, paper.body.position, {x:112, y:-135});
   }
 }
+
 
 
