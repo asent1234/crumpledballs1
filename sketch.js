@@ -13,7 +13,7 @@ function setup() {
 	world = engine.world
 
 	dustbin = new DustBin(720, 690, 100, 10)
-	paper = new Paper(100,600,30)
+	paper = new Paper(100,600,10)
 	//Create a Ground
 	ground = Bodies.rectangle(width/2, 700, width, 10 , {isStatic:true} );
  	World.add(world, ground);
@@ -43,7 +43,7 @@ function draw() {
 
 function keyPressed() {
  if (keyCode === UP_ARROW && gameState === "play") {
-    Matter.Body.applyForce(paper.body, paper.body.position, {x:112, y:-135});
+    Matter.Body.applyForce(paper.body, paper.body.position, {x:12, y:-15});
   }
 }
 
